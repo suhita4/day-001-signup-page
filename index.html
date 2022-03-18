@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign up</title>
+</head>
+<body>
+  <div class="form">
+    <h1>Sign up</h1>
+    <form>
+      <div class="name">
+        <p>Name</p>
+        <input type="text" name="name" id="" required placeholder="John Doe">
+      </div>
+      <div class="email">
+        <p>Email address</p>
+        <input type="email" name="email" id="" required placeholder="johndoe@email.com">
+      </div>
+      <div class="password">
+        <p>Password</p>
+        <div class="input">
+          <input type="password" name="password" id="password" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"><img src="ant-design_eye-invisible-outlined.png" alt="" id="eye" onclick="visible()">
+        </div>
+      </div>
+      <button>Sign up</button>
+    </form>
+    <p class="login">Already have an account? <a href="#">Log in</a></p>
+  </div>
+  <div class="illustration">
+    <img src="rafiki.png" alt="Illustration of a person signing up">
+  </div>
+  <script>
+    function visible() {
+      let input = document.getElementById('password');
+      if (input.type === "password") {
+        input.type = "text";
+        document.getElementById('eye').src = 'ant-design_eye-outlined.png'
+      } else {
+        input.type = "password";
+        document.getElementById('eye').src = 'ant-design_eye-invisible-outlined.png'
+      }
+    }
+  </script>
+</body>
+</html>
